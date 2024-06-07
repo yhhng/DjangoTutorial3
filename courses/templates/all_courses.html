@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+    My Course - List of all courses
+{% endblock %}
+
+
+{% block content %}
+
+    <p><a href="/">HOME</a></p>
+
+    <h1>Courses</h1>
+
+    <ul>
+        {% for course in mycourses %}
+            <li><a href="details/{{ course.id }}">{{ course.course_name }} - {{ course.course_number }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

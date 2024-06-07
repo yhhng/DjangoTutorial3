@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mycourse.course_name }} - {{ mycourse.course_number }}
+{% endblock %}
+
+{% block content %}
+
+    <h1>{{ mycourse.course_name }} - {{ mycourse.course_number }}</h1>
+
+    <p>Description: {{ mycourse.description }}</p>
+    <p>Credits: {{ mycourse.credits }}</p>
+
+    <p>Back to <a href="/courses">Courses</a></p>
+
+{% endblock %}
